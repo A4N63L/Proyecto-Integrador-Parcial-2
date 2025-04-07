@@ -1,4 +1,3 @@
-/* General Styles */
 :root {
   --primary-color: #0d6efd;
   --secondary-color: #6c757d;
@@ -17,7 +16,6 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Header Styles */
 .navbar-brand {
   font-weight: 700;
   font-size: 1.4rem;
@@ -30,7 +28,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Card Styles */
 .card {
   border: none;
   border-radius: 0.5rem;
@@ -48,7 +45,6 @@ body {
   object-fit: cover;
 }
 
-/* Icon Styles */
 .icon-circle {
   width: 40px;
   height: 40px;
@@ -59,7 +55,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Timeline Styles */
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -97,7 +92,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Code Block Styles */
 .code-block {
   background-color: #f8f9fa;
   border-radius: 0.25rem;
@@ -115,7 +109,7 @@ body {
   color: #333;
 }
 
-/* Workflow Steps */
+
 .workflow-steps {
   position: relative;
 }
@@ -147,7 +141,7 @@ body {
   flex: 1;
 }
 
-/* Best Practice Styles */
+
 .best-practice {
   padding: 1rem;
   border-radius: 0.5rem;
@@ -155,7 +149,7 @@ body {
   height: 100%;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .page-header,
   .hero-section {
@@ -190,18 +184,18 @@ body {
   }
 }
 
-/* Toast Notification Styles */
+
 .toast {
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/* Offcanvas Styles */
+
 .offcanvas-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Progress Bar Styles */
+
 .progress {
   height: 0.8rem;
   border-radius: 1rem;
@@ -212,7 +206,7 @@ body {
   border-radius: 1rem;
 }
 
-/* Tooltip and Popover Styles */
+
 .tooltip {
   font-size: 0.875rem;
 }
@@ -228,7 +222,7 @@ body {
   border-bottom: none;
 }
 
-/* Modal Styles */
+
 .modal-content {
   border: none;
   border-radius: 0.5rem;
