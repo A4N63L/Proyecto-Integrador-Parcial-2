@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Web API | Tecnologías Web Modernas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Tecnologías Web Modernas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="web-apis.html">Web APIs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="microservicios.html">Microservicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="desarrollo-api.html">Desarrollo de Web API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contenedores.html">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aplicaciones-nube.html">Aplicaciones para la Nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Desarrollo de Web API</h1>
+            <p class="lead">Proceso y recomendaciones para el desarrollo efectivo de APIs web modernas</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <section class="mb-5">
+                        <h2 class="mb-4">Recomendaciones para el desarrollo de APIs</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-bullseye"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Definir los objetivos</h5>
+                                        </div>
+                                        <p class="card-text">Antes de comenzar a desarrollar la API, es fundamental tener una comprensión clara de los problemas que intentará resolver y los usuarios a los que servirá.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-check-square"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Seguir estándares</h5>
+                                        </div>
+                                        <p class="card-text">Es importante seguir los estándares y convenciones de la industria al desarrollar una API web. Esto facilita la comprensión y el uso de la API por parte de otros desarrolladores, por ejemplo seguir los principios de REST, utilizar JSON o XML como formatos de intercambio de datos, etc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-book"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Documentar la API</h5>
+                                        </div>
+                                        <p class="card-text">La documentación clara y completa de la API es esencial para que otros desarrolladores puedan entender cómo usarla correctamente, se pueden utilizar herramientas como Swagger o Postman para generar documentación automáticamente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Priorizar la seguridad</h5>
+                                        </div>
+                                        <p class="card-text">La seguridad es un aspecto crucial en el desarrollo de las APIs web, se deben implementar medidas de seguridad como autenticación y autorización para proteger la API de accesos no autorizados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-code-branch"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Versionar la API</h5>
+                                        </div>
+                                        <p class="card-text">A medida que la API evoluciona, es importante mantener la compatibilidad hacia atrás, versionar la API permite introducir cambios sin afectar a los usuarios existentes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Proceso de desarrollo de una Web API</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">1. Análisis de requerimientos</h4>
+                                            <p>Identificar los requisitos funcionales y no funcionales de la API, incluidos los casos de uso y los datos que se manipularán.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">2. Planificación</h4>
+                                            <p>Una vez que se han definido los requerimientos, se pasa a la planificación del proyecto, que incluye la definición de los objetivos del proyecto, la asignación de recursos, la estimación de tiempos y costos, y la definición de la metodología de desarrollo a utilizar. La planificación se basa en los requerimientos identificados.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">3. Diseño de la API</h4>
+                                            <p>Definir los endpoints, métodos HTTP admitidos, parámetros de solicitud y respuesta, y esquema de autenticación.</p>
+                                            <div class="card mt-3">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">¿Qué es un endpoint?</h5>
+                                                    <p>Un endpoint en el contexto de una API web es una URL específica a la que los clientes pueden enviar solicitudes HTTP para interactuar con la API, cada endpoint está asociado con una operación específica que la API puede realizar, como obtener información, enviar datos o eliminar recursos.</p>
+                                                    <p>Por ejemplo, en una API de un blog, los endpoints podrían ser:</p>
+                                                    <ul>
+                                                        <li><code>/posts</code>: Para obtener una lista de todos los posts o crear un nuevo post.</li>
+                                                        <li><code>/posts/{id}</code>: Para obtener, actualizar o eliminar un post específico identificado por su ID.</li>
+                                                        <li><code>/comments</code>: Para obtener una lista de todos los comentarios o crear un nuevo comentario.</li>
+                                                        <li><code>/comments/{id}</code>: Para obtener, actualizar o eliminar un comentario específico identificado por su ID.</li>
+                                                    </ul>
+                                                    <p>Cada endpoint suele estar asociado con un método HTTP específico, como GET, POST, PUT o DELETE, que indica la acción que se desea realizar en el recurso correspondiente.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">4. Implementación</h4>
+                                            <p>Al desarrollar una API se debe seguir un diseño definido, utilizando herramientas y frameworks adecuados como por ejemplo Express.js para Node.js o Flask para Python.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">5. Pruebas</h4>
+                                            <p>Realizar pruebas unitarias y de integración para garantizar que la API funcione según lo esperado y que maneje adecuadamente los errores.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">6. Documentación</h4>
+                                            <p>Crear documentación clara y detallada de la API, incluidos ejemplos de uso y casos de error.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">7. Despliegue</h4>
+                                            <p>Implementar la API en un entorno de producción, asegurando que esté disponible y escalable.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">8. Monitoreo y mantenimiento</h4>
+                                            <p>Establecer un sistema de monitoreo para detectar problemas y realizar mantenimiento regular para garantizar que la API siga siendo eficiente y segura.</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker bg-primary"></div>
+                                        <div class="timeline-content">
+                                            <h4 class="timeline-title">9. Comercialización (opcional)</h4>
+                                            <p>Al desarrollar Apis que serán ofertadas al público o las empresas, entonces será conveniente publicar la API para monetizarla en algún mercado de APIs en donde los desarrolladores compran y vendan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Herramientas para el desarrollo de APIs</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="img/swagger.jpg" class="card-img-top" alt="Swagger">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Swagger / OpenAPI</h5>
+                                        <p class="card-text">Conjunto de herramientas para diseñar, construir, documentar y consumir APIs RESTful. Permite generar documentación interactiva y realizar pruebas de endpoints.</p>
+                                        <a href="https://swagger.io/" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="img/postman.jpg" class="card-img-top" alt="Postman">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Postman</h5>
+                                        <p class="card-text">Plataforma de colaboración para el desarrollo de API que permite diseñar, probar, documentar y compartir APIs. Ofrece una interfaz gráfica para realizar solicitudes HTTP.</p>
+                                        <a href="https://www.postman.com/" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="img/express-js.jpg" class="card-img-top" alt="Express.js">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Express.js</h5>
+                                        <p class="card-text">Framework web minimalista y flexible para Node.js que proporciona un conjunto robusto de características para aplicaciones web y móviles, incluyendo la creación de APIs.</p>
+                                        <a href="https://expressjs.com/" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <img src="img/flask.jpg" class="card-img-top" alt="Flask">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Flask</h5>
+                                        <p class="card-text">Microframework de Python que permite desarrollar aplicaciones web y APIs de manera rápida y sencilla. Es ligero y flexible, ideal para proyectos pequeños y medianos.</p>
+                                        <a href="https://flask.palletsprojects.com/" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Mejores prácticas para el diseño de APIs</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="best-practice">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="badge bg-primary me-2">1</span>
+                                                <h5 class="mb-0">Usar sustantivos en lugar de verbos</h5>
+                                            </div>
+                                            <p>Para los endpoints de la API, utiliza sustantivos que representen recursos en lugar de verbos. Por ejemplo, usa <code>/users</code> en lugar de <code>/getUsers</code>.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="best-practice">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="badge bg-primary me-2">2</span>
+                                                <h5 class="mb-0">Utilizar métodos HTTP correctamente</h5>
+                                            </div>
+                                            <p>Usa los métodos HTTP (GET, POST, PUT, DELETE) según su propósito semántico para las operaciones CRUD (Crear, Leer, Actualizar, Eliminar).</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="best-practice">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="badge bg-primary me-2">3</span>
+                                                <h5 class="mb-0">Manejar errores de forma consistente</h5>
+                                            </div>
+                                            <p>Implementa un formato de respuesta de error consistente que incluya un código de estado HTTP apropiado, un mensaje de error y detalles adicionales cuando sea necesario.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="best-practice">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="badge bg-primary me-2">4</span>
+                                                <h5 class="mb-0">Implementar paginación</h5>
+                                            </div>
+                                            <p>Para endpoints que devuelven grandes conjuntos de datos, implementa paginación para mejorar el rendimiento y la experiencia del usuario.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="best-practice">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="badge bg-primary me-2">5</span>
+                                                <h5 class="mb-0">Permitir filtrado, ordenamiento y búsqueda</h5>
+                                            </div>
+                                            <p>Proporciona parámetros de consulta para permitir a los clientes filtrar, ordenar y buscar recursos según sus necesidades.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="best-practice">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <span class="badge bg-primary me-2">6</span>
+                                                <h5 class="mb-0">Usar HTTPS</h5>
+                                            </div>
+                                            <p>Siempre utiliza HTTPS para proteger los datos transmitidos entre el cliente y el servidor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Ejemplo de diseño de API RESTful</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">API para un sistema de gestión de biblioteca</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>A continuación se muestra un ejemplo de diseño de endpoints para una API RESTful de un sistema de gestión de biblioteca:</p>
+                                
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th>Endpoint</th>
+                                                <th>Método</th>
+                                                <th>Descripción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><code>/books</code></td>
+                                                <td>GET</td>
+                                                <td>Obtener lista de todos los libros</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/books/{id}</code></td>
+                                                <td>GET</td>
+                                                <td>Obtener detalles de un libro específico</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/books</code></td>
+                                                <td>POST</td>
+                                                <td>Agregar un nuevo libro</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/books/{id}</code></td>
+                                                <td>PUT</td>
+                                                <td>Actualizar información de un libro</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/books/{id}</code></td>
+                                                <td>DELETE</td>
+                                                <td>Eliminar un libro</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/authors</code></td>
+                                                <td>GET</td>
+                                                <td>Obtener lista de todos los autores</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/authors/{id}</code></td>
+                                                <td>GET</td>
+                                                <td>Obtener detalles de un autor específico</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/authors/{id}/books</code></td>
+                                                <td>GET</td>
+                                                <td>Obtener todos los libros de un autor específico</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/users/{id}/loans</code></td>
+                                                <td>GET</td>
+                                                <td>Obtener todos los préstamos de un usuario</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/loans</code></td>
+                                                <td>POST</td>
+                                                <td>Registrar un nuevo préstamo</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>/loans/{id}/return</code></td>
+                                                <td>PUT</td>
+                                                <td>Registrar la devolución de un préstamo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Video Explicativo</h2>
+                        <div class="ratio ratio-16x9 shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/lsMQRaeKNDk" title="Desarrollo de APIs RESTful" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+    <div class="sticky-top" style="top: 80px;">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Contenido</h5>
+            </div>
+            <div class="card-body">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">Recomendaciones</a>
+                        <a class="nav-link" href="#item-2">Proceso de desarrollo</a>
+                        <a class="nav-link" href="#item-3">Herramientas</a>
+                        <a class="nav-link" href="#item-4">Mejores prácticas</a>
+                        <a class="nav-link" href="#item-5">Ejemplo de diseño</a>
+                        <a class="nav-link" href="#item-6">Video</a>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Información del proyecto</h5>
+            </div>
+            <div class="card-body">
+                <p>Este contenido forma parte del proyecto académico de Desarrollo Web.</p>
+                <p>Universidad Autónoma, 2025</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+

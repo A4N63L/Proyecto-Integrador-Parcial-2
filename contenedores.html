@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Contenedores | Tecnologías Web Modernas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Tecnologías Web Modernas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="web-apis.html">Web APIs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="microservicios.html">Microservicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desarrollo-api.html">Desarrollo de Web API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contenedores.html">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aplicaciones-nube.html">Aplicaciones para la Nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Manejo de Contenedores</h1>
+            <p class="lead">Tecnologías para empaquetar, distribuir y ejecutar aplicaciones en entornos aislados</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <section class="mb-5">
+                        <h2 class="mb-4">¿Qué son los contenedores?</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0">
+                                        <img src="img/containers-concept.jpg" alt="Concepto de Contenedores" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>Los contenedores son unidades ejecutables de software en las que se empaqueta el código de la aplicación junto con sus bibliotecas y dependencias, de manera que se puede ejecutar en cualquier entorno informático.</p>
+                                        <p>Los contenedores virtualizan el sistema operativo, a diferencia de las máquinas virtuales que virtualizan el hardware. Esto los hace más ligeros y eficientes, ya que comparten el kernel del sistema operativo host.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Toast Notification Component -->
+                        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                            <div id="containerToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="toast-header bg-primary text-white">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong class="me-auto">Dato interesante</strong>
+                                    <small>Ahora</small>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                                </div>
+                                <div class="toast-body">
+                                    ¿Sabías que Docker, la plataforma de contenedores más popular, fue lanzada en 2013 y revolucionó la forma en que se desarrollan y despliegan aplicaciones?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mb-4">
+                            <button type="button" class="btn btn-primary" id="showToastBtn">
+                                <i class="fas fa-lightbulb me-2"></i>Mostrar dato interesante
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Ventajas de los contenedores</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-rocket"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Portabilidad</h5>
+                                        </div>
+                                        <p class="card-text">Los contenedores encapsulan todas las dependencias, lo que permite que las aplicaciones se ejecuten de manera consistente en diferentes entornos, desde el desarrollo hasta la producción.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-tachometer-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Eficiencia</h5>
+                                        </div>
+                                        <p class="card-text">Los contenedores comparten el kernel del sistema operativo host, lo que los hace más ligeros y rápidos que las máquinas virtuales tradicionales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-expand-arrows-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Escalabilidad</h5>
+                                        </div>
+                                        <p class="card-text">Los contenedores facilitan la escalabilidad horizontal, permitiendo aumentar o disminuir rápidamente el número de instancias de una aplicación según la demanda.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Aislamiento</h5>
+                                        </div>
+                                        <p class="card-text">Cada contenedor funciona de manera aislada, lo que mejora la seguridad y evita conflictos entre aplicaciones que comparten el mismo host.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Tecnologías de contenedores</h2>
+                        
+                        <!-- Spinner Component -->
+                        <div class="text-center mb-4" id="spinnerContainer">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                            <p class="mt-2">Cargando tecnologías de contenedores...</p>
+                        </div>
+                        
+                        <div id="containerTechnologies" class="d-none">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="img/docker.jpg" class="card-img-top" alt="Docker">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Docker</h5>
+                                            <p class="card-text">La plataforma de contenedores más popular que permite a los desarrolladores empaquetar aplicaciones en contenedores. Docker proporciona un conjunto completo de herramientas para crear, distribuir y ejecutar contenedores.</p>
+                                            <a href="https://www.docker.com/" class="btn btn-sm btn-primary" target="_blank">
+                                                <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="img/kubernetes.jpg" class="card-img-top" alt="Kubernetes">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Kubernetes</h5>
+                                            <p class="card-text">Sistema de orquestación de contenedores de código abierto que automatiza la implementación, el escalado y la gestión de aplicaciones en contenedores. Kubernetes facilita la administración de clústeres de contenedores a gran escala.</p>
+                                            <a href="https://kubernetes.io/" class="btn btn-sm btn-primary" target="_blank">
+                                                <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="img/containerd.jpg" class="card-img-top" alt="containerd">
+                                        <div class="card-body">
+                                            <h5 class="card-title">containerd</h5>
+                                            <p class="card-text">Un runtime de contenedores de nivel industrial que gestiona el ciclo de vida completo de los contenedores, desde la transferencia de imágenes hasta la ejecución, supervisión y gestión de red.</p>
+                                            <a href="https://containerd.io/" class="btn btn-sm btn-primary" target="_blank">
+                                                <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 shadow-sm">
+                                        <img src="img/podman.jpg" class="card-img-top" alt="Podman">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Podman</h5>
+                                            <p class="card-text">Una alternativa a Docker que no requiere un daemon en ejecución. Podman puede ejecutar contenedores como usuario no privilegiado y ofrece compatibilidad con la API de Docker.</p>
+                                            <a href="https://podman.io/" class="btn btn-sm btn-primary" target="_blank">
+                                                <i class="fas fa-external-link-alt me-1"></i> Visitar
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Conceptos clave de contenedores</h2>
+                        
+                        <!-- Offcanvas Component -->
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                            <div class="offcanvas-header bg-primary text-white">
+                                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Glosario de términos</h5>
+                                <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div>
+                                    Aquí encontrarás definiciones de los términos más importantes relacionados con los contenedores.
+                                </div>
+                                <div class="mt-3">
+                                    <h6 class="fw-bold">Imagen de contenedor</h6>
+                                    <p>Plantilla de solo lectura con instrucciones para crear un contenedor.</p>
+                                    
+                                    <h6 class="fw-bold">Dockerfile</h6>
+                                    <p>Archivo de texto que contiene instrucciones para construir una imagen de Docker.</p>
+                                    
+                                    <h6 class="fw-bold">Orquestación</h6>
+                                    <p>Proceso de automatizar el despliegue, gestión, escalado y networking de contenedores.</p>
+                                    
+                                    <h6 class="fw-bold">Pod</h6>
+                                    <p>En Kubernetes, un grupo de uno o más contenedores con almacenamiento y red compartidos.</p>
+                                    
+                                    <h6 class="fw-bold">Volumen</h6>
+                                    <p>Mecanismo para persistir datos generados y utilizados por contenedores.</p>
+                                    
+                                    <h6 class="fw-bold">Registry</h6>
+                                    <p>Repositorio para almacenar y distribuir imágenes de contenedores.</p>
+                                    
+                                    <h6 class="fw-bold">Namespace</h6>
+                                    <p>Mecanismo para aislar grupos de recursos dentro de un clúster.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mb-4">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                <i class="fas fa-book me-2"></i>Ver glosario de términos
+                            </button>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Arquitectura de contenedores</h5>
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <img src="img/container-architecture.jpg" alt="Arquitectura de contenedores" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Los contenedores se basan en varias tecnologías del kernel de Linux, como namespaces y cgroups, que proporcionan aislamiento y control de recursos.</p>
+                                        <ul>
+                                            <li><strong>Namespaces:</strong> Proporcionan aislamiento para procesos, redes, sistemas de archivos, etc.</li>
+                                            <li><strong>Control Groups (cgroups):</strong> Limitan y aíslan el uso de recursos como CPU, memoria y E/S.</li>
+                                            <li><strong>Union File Systems:</strong> Permiten que las capas de imágenes sean apiladas y vistas como un sistema de archivos único.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Flujo de trabajo con contenedores</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="workflow-steps">
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">1</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Crear un Dockerfile</h5>
+                                            <p>Define las instrucciones para construir la imagen del contenedor, incluyendo el sistema operativo base, dependencias, archivos de la aplicación y configuraciones.</p>
+                                            <div class="code-block">
+                                                <pre><code>FROM node:14
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">2</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Construir la imagen</h5>
+                                            <p>Utiliza el Dockerfile para crear una imagen que contiene todo lo necesario para ejecutar la aplicación.</p>
+                                            <div class="code-block">
+                                                <pre><code>docker build -t mi-aplicacion:1.0 .</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">3</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Ejecutar el contenedor</h5>
+                                            <p>Inicia un contenedor basado en la imagen construida.</p>
+                                            <div class="code-block">
+                                                <pre><code>docker run -p 3000:3000 mi-aplicacion:1.0</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">4</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Distribuir la imagen</h5>
+                                            <p>Sube la imagen a un registro de contenedores para compartirla con otros o desplegarla en diferentes entornos.</p>
+                                            <div class="code-block">
+                                                <pre><code>docker push mi-registro/mi-aplicacion:1.0</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">5</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Orquestar contenedores</h5>
+                                            <p>Utiliza herramientas como Kubernetes o Docker Swarm para gestionar múltiples contenedores, escalado, balanceo de carga y recuperación ante fallos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Video Explicativo</h2>
+                        <div class="ratio ratio-16x9 shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/0qotVMX-J5s" title="¿Qué son los contenedores?" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+    <div class="sticky-top" style="top: 80px;">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Contenido</h5>
+            </div>
+            <div class="card-body">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">¿Qué son los contenedores?</a>
+                        <a class="nav-link" href="#item-2">Ventajas</a>
+                        <a class="nav-link" href="#item-3">Tecnologías</a>
+                        <a class="nav-link" href="#item-4">Conceptos clave</a>
+                        <a class="nav-link" href="#item-5">Flujo de trabajo</a>
+                        <a class="nav-link" href="#item-6">Video</a>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Información del proyecto</h5>
+            </div>
+            <div class="card-body">
+                <p>Este contenido forma parte del proyecto académico de Desarrollo Web.</p>
+                <p>Universidad Autónoma, 2025</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+

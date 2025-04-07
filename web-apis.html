@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologías de Web APIs | Tecnologías Web Modernas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <i class="fas fa-code me-2"></i>Tecnologías Web Modernas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../web-apis.html">Web APIs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../microservicios.html">Microservicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../desarrollo-api.html">Desarrollo de Web API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contenedores.html">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../aplicaciones-nube.html">Aplicaciones para la Nube</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../cuestionario.html">Cuestionario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Tecnologías de Web APIs</h1>
+            <p class="lead">Mecanismos que permiten a dos componentes de software comunicarse entre sí</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <section class="mb-5">
+                        <h2 class="mb-4">Definición de API</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0">
+                                        <div class="bg-light d-flex align-items-center justify-content-center rounded" style="height: 150px;">
+                                            <i class="fas fa-exchange-alt fa-4x text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>Mecanismos que permiten a dos componentes de software comunicarse entre sí mediante un conjunto de definiciones y protocolos. (Amazon, 2023)</p>
+                                        <p>Una API (interfaz de programación de aplicaciones), es un conjunto de reglas definidas que permiten que diferentes aplicaciones se comuniquen entre sí. Actúa como una capa intermedia que procesa las transferencias de datos entre sistemas, permitiendo a las empresas abrir sus datos y funcionalidades de aplicaciones a desarrolladores externos, socios comerciales y departamentos internos dentro de sus empresas. (IBM, 2023)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Ejemplos de APIs</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="fab fa-google fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">APIs de Google</h5>
+                                        <p class="card-text">Google ofrece una amplia gama de APIs para sus servicios, incluyendo Búsqueda, Gmail, Traductor y Maps.</p>
+                                        <a href="https://developers.google.com/apis-explorer" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Explorar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="fab fa-paypal fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">PayPal API</h5>
+                                        <p class="card-text">La API de PayPal permite a los desarrolladores integrar funcionalidades de pago en sus aplicaciones y sitios web.</p>
+                                        <a href="https://developer.paypal.com/docs/api/overview/" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Explorar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="fab fa-youtube fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">YouTube API</h5>
+                                        <p class="card-text">La API de YouTube permite incrustar videos y acceder a funcionalidades de la plataforma en aplicaciones externas.</p>
+                                        <a href="https://developers.google.com/youtube/v3" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Explorar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-img-top bg-light d-flex align-items-center justify-content-center" style="height: 150px;">
+                                        <i class="fab fa-whatsapp fa-4x text-primary"></i>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">WhatsApp Business API</h5>
+                                        <p class="card-text">Permite a las empresas comunicarse con sus clientes a través de WhatsApp de manera automatizada.</p>
+                                        <a href="https://developers.facebook.com/docs/whatsapp/api/overview" class="btn btn-sm btn-primary" target="_blank">
+                                            <i class="fas fa-external-link-alt me-1"></i> Explorar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Tipos de APIs</h2>
+                        <div class="accordion" id="apiTypesAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        APIs REST
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#apiTypesAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <p>Las APIs REST (Representational State Transfer) son el tipo más común de API web. Utilizan métodos HTTP estándar (GET, POST, PUT, DELETE) para realizar operaciones en recursos identificados por URLs.</p>
+                                                <p>Características principales:</p>
+                                                <ul>
+                                                    <li>Arquitectura cliente-servidor sin estado</li>
+                                                    <li>Interfaz uniforme</li>
+                                                    <li>Sistema de capas</li>
+                                                    <li>Cacheable</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="bg-light d-flex align-items-center justify-content-center rounded" style="height: 150px;">
+                                                    <i class="fas fa-server fa-4x text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        APIs SOAP
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#apiTypesAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <p>SOAP (Simple Object Access Protocol) es un protocolo de mensajería basado en XML para intercambiar información estructurada en la implementación de servicios web.</p>
+                                                <p>Características principales:</p>
+                                                <ul>
+                                                    <li>Independiente del protocolo de transporte</li>
+                                                    <li>Basado en XML</li>
+                                                    <li>Altamente estructurado</li>
+                                                    <li>Incluye seguridad y manejo de errores integrados</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="bg-light d-flex align-items-center justify-content-center rounded" style="height: 150px;">
+                                                    <i class="fas fa-envelope fa-4x text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        APIs GraphQL
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#apiTypesAccordion">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-8">
+                                                <p>GraphQL es un lenguaje de consulta y manipulación de datos para APIs, así como un entorno de ejecución para realizar estas consultas con datos existentes.</p>
+                                                <p>Características principales:</p>
+                                                <ul>
+                                                    <li>Solicitud exacta de datos necesarios</li>
+                                                    <li>Obtención de múltiples recursos en una sola solicitud</li>
+                                                    <li>Sistema de tipos fuertemente tipado</li>
+                                                    <li>Evolución de API sin versiones</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="bg-light d-flex align-items-center justify-content-center rounded" style="height: 150px;">
+                                                    <i class="fas fa-project-diagram fa-4x text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Beneficios de las APIs</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-sync-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Integración</h5>
+                                        </div>
+                                        <p class="card-text">Facilitan la integración entre diferentes sistemas y aplicaciones, permitiendo que trabajen juntos de manera eficiente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-rocket"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Innovación</h5>
+                                        </div>
+                                        <p class="card-text">Permiten a los desarrolladores crear nuevas aplicaciones y servicios basados en datos y funcionalidades existentes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Seguridad</h5>
+                                        </div>
+                                        <p class="card-text">Proporcionan una capa de abstracción que puede mejorar la seguridad al controlar qué datos y funcionalidades se exponen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-expand-arrows-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Escalabilidad</h5>
+                                        </div>
+                                        <p class="card-text">Facilitan el crecimiento de las aplicaciones al permitir la adición de nuevas funcionalidades sin afectar a los sistemas existentes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Video Explicativo</h2>
+                        <div class="ratio ratio-16x9 shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/s7wmiS2mSXY" title="¿Qué es una API?" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 80px;">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Contenido</h5>
+                            </div>
+                            <div class="card-body">
+                                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                                    <nav class="nav nav-pills flex-column">
+                                        <a class="nav-link" href="#item-1">Definición de API</a>
+                                        <a class="nav-link" href="#item-2">Ejemplos de APIs</a>
+                                        <a class="nav-link" href="#item-3">Tipos de APIs</a>
+                                        <a class="nav-link" href="#item-4">Beneficios de las APIs</a>
+                                        <a class="nav-link" href="#item-5">Video Explicativo</a>
+                                    </nav>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Información del proyecto</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Este contenido forma parte del proyecto académico de Desarrollo Web.</p>
+                                <p>Universidad Autónoma, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
+

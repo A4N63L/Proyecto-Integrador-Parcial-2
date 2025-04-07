@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservicios | Tecnologías Web Modernas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-code me-2"></i>Tecnologías Web Modernas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="web-apis.html">Web APIs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="microservicios.html">Microservicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="desarrollo-api.html">Desarrollo de Web API</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contenedores.html">Contenedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aplicaciones-nube.html">Aplicaciones para la Nube</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Microservicios</h1>
+            <p class="lead">Servicios ligeros con acople suelto para crear aplicaciones basadas en la nube</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <section class="mb-5">
+                        <h2 class="mb-4">¿Qué son los microservicios?</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4 mb-3 mb-md-0">
+                                        <img src="img/microservices-concept.jpg" alt="Concepto de Microservicios" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p>Los microservicios son módulos ligeros con acople suelto que pueden servir como componentes básicos de las aplicaciones complejas basadas en la nube. Aunque los microservicios individuales pueden operar de forma independiente, tienen un acople suelto en una interfaz unificada.</p>
+                                        <p>La arquitectura de microservicios se considera un reemplazo moderno y flexible del modelo de desarrollo más tradicional de la arquitectura monolítica.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Comparación: Arquitectura Monolítica vs. Microservicios</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-primary">
+                                            <tr>
+                                                <th>Arquitectura Monolítica</th>
+                                                <th>Arquitectura de Microservicios</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Un servidor virtualizado o físico asignado a cada aplicación</td>
+                                                <td>Múltiples instancias en uno o varios servidores</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Servidores siempre en ejecución</td>
+                                                <td>Recursos escalan dinámicamente según demanda</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Disponibilidad y escalamiento dependen del hardware</td>
+                                                <td>Escalabilidad flexible e independiente por servicio</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Entidad fija</td>
+                                                <td>Suelen estar en contenedores para mejorar portabilidad</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Características de los microservicios</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-cubes"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Componentes</h5>
+                                        </div>
+                                        <p class="card-text">Los microservicios suelen estar formados por componentes de software discretos que son actualizables y reemplazables de forma individual. Esta arquitectura tiene implicaciones para la tecnología de administración de la nube porque cada uno de los microservicios debe estar aprovisionado, monitoreado y actualizado por separado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-cogs"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Servicios</h5>
+                                        </div>
+                                        <p class="card-text">Los componentes comprenden servicios que están disponibles para comunicarse a pedido, pero pueden no estar activos de forma continua entre las solicitudes o las llamadas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-code-branch"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Implementación independiente</h5>
+                                        </div>
+                                        <p class="card-text">En su mayor parte, los componentes de servicios individuales operan de forma independiente uno de otro dentro del marco de microservicios. Si se cambia o actualiza un componente, hay poco impacto en otros servicios y componentes, especialmente cuando se compara con una arquitectura monolítica más tradicional.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Seguridad</h5>
+                                        </div>
+                                        <p class="card-text">La comunicación entre los microservicios suele estar cifrada con seguridad de la capa de transporte mutuo (mTLS) para proteger los datos del malware y las intrusiones mientras está en tránsito.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <div class="icon-circle bg-primary text-white me-3">
+                                                <i class="fas fa-box"></i>
+                                            </div>
+                                            <h5 class="card-title mb-0">Contenerización</h5>
+                                        </div>
+                                        <p class="card-text">Los microservicios suelen implementarse en contenedores para lograr escalabilidad y portabilidad adicionales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Beneficios de los microservicios</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <p>Los microservicios continúan ganando popularidad debido a la flexibilidad innata de la arquitectura en la nube. De hecho, un estudio reciente realizado por Intel reveló que el 83% de todas las nuevas aplicaciones nativas de la nube y las soluciones de SaaS están usando microservicios.</p>
+                                
+                                <div class="alert alert-primary" role="alert">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    Uno de los mayores beneficios de los microservicios es la velocidad y la flexibilidad de implementación.
+                                </div>
+                                
+                                <p>A medida que las cargas de trabajo y las aplicaciones de nube continúan creciendo en escala y alcance, es cada vez más difícil y requiere más tiempo adaptar las arquitecturas monolíticas para incorporar las nuevas demandas. Los microservicios están desglosados, de modo que su desarrollo, implementación y mantenimiento pueden administrarse en un modelo distribuido.</p>
+                                
+                                <p>Por ejemplo, se puede dar la responsabilidad de uno o más de los microservicios a varios equipos de desarrollo independientes. La distribución de responsabilidades facilita la reorganización de la función de DevOps, según las capacidades empresariales de cada unidad. Eso puede llevar a la modernización de todo el proceso de desarrollo y la eliminación de los silos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Desafíos de los microservicios</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <strong>Desempeño inconsistente:</strong> Los módulos individuales pueden ejecutarse en diferentes sistemas para cumplir una solicitud, lo que puede producir que el desempeño sea inconsistente entre los módulos.
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Latencia:</strong> Puede convertirse en un problema para algunos microservicios, como cuando hay picos de demanda. Estos problemas a menudo pueden resolverse mediante el sobreaprovisionamiento de recursos para acaparar los niveles de demanda pico.
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Depuración compleja:</strong> Puede ser difícil depurar un servicio con fallas después de que deje de funcionar. Una solución es coordinar la infraestructura y supervisar todos los procesos y los flujos de datos con anticipación.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Cómo funciona la arquitectura de microservicios</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <p>En una arquitectura de microservicios, una aplicación compleja se desglosa en capacidades discretas que pueden desarrollarse y operarse de forma independiente. Los microservicios individuales se comunican entre sí, a menudo a través de las APIs, y tienen conexiones sueltas, pero cada microservicio puede desarrollarse, implementarse y actualizarse por separado.</p>
+                                
+                                <h5 class="mt-4">Patrones de implementación de microservicios</h5>
+                                <div class="row g-4 mt-2">
+                                    <div class="col-md-4">
+                                        <div class="card h-100 border-primary">
+                                            <div class="card-header bg-primary text-white text-center">
+                                                <h6 class="mb-0">Nativo de la nube</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Algunos servicios y aplicaciones establecidos de alto volumen comienzan como microservicios y permanecen en la nube. Según IDC, alrededor del 56% de los microservicios son nativos de la nube.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100 border-primary">
+                                            <div class="card-header bg-primary text-white text-center">
+                                                <h6 class="mb-0">Refactorización y cambio</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Estas implementaciones comienzan en las instalaciones o en un centro de datos en el perímetro y se refactorizan para adaptarse a la arquitectura de microservicios basados en la nube.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card h-100 border-primary">
+                                            <div class="card-header bg-primary text-white text-center">
+                                                <h6 class="mb-0">Lift and shift</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Algunas organizaciones migran sus aplicaciones a una arquitectura de microservicios, sin refactorización, en una simple transición "lift and shift".</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Microservicios y DevOps</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <p>La arquitectura de microservicios tiene una naturaleza desglosada, lo que suele causar que los equipos de DevOps adopten un enfoque de funciones cruzadas para el desarrollo de aplicaciones.</p>
+                                        <p>En lugar de desarrollar aplicaciones de software en una pila, con un equipo asignado para trabajar en el firmware, otro para middleware y un tercero para las interfaces de usuario, por ejemplo, es más probable que el esfuerzo de desarrollo de los microservicios se organice entorno a las capacidades empresariales.</p>
+                                        <p>En cierto modo, los procesos de desarrollo y la organización de los equipos de DevOps pueden imitar la estructura misma de los microservicios, con sus unidades autónomas casi independientes que interactúan libremente, trascendiendo las barreras y silos.</p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="img/devops-microservices.jpg" alt="DevOps y Microservicios" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-secondary mt-3">
+                                    <i class="fas fa-quote-left me-2"></i>
+                                    <em>Es muy importante que todas las partes interesadas entiendan que la modernización de una aplicación monolítica en una arquitectura de microservicios es un viaje épico y podría llevar muchas iteraciones. Es necesario que los arquitectos y desarrolladores evalúen de cerca varios aspectos del monolito y creen un enfoque de migración para cada uno de ellos.</em>
+                                    <p class="text-end mb-0 mt-2">—IBM, "Challenges and Patterns for Modernizing a Monolithic Application into Microservices"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Protección de los microservicios</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <p>Debido a que los microservicios suelen estar diseñados para interactuar entre sí, es importante proteger los datos mientras se usan en cada extremo de la interacción o en tránsito entre esos dos puntos.</p>
+                                
+                                <div class="row align-items-center mt-3">
+                                    <div class="col-md-4 mb-3 mb-md-0">
+                                        <img src="img/security-microservices.jpg" alt="Seguridad en Microservicios" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h5>Seguridad de la capa de transporte mutuo (mTLS)</h5>
+                                        <p>El cifrado con la seguridad de la capa de transporte mutuo (mTLS) es una solución común que ayuda a reducir el riesgo de intrusión y malware para los datos en cada punto de conexión y en tránsito. El objetivo de la mTLS es cifrar todas las solicitudes que haga cada microservicio.</p>
+                                        <p>Este enfoque holístico para la seguridad es la base de un entorno de confianza cero, donde cada microservicio, usuario y conexión debe verificarse y autorizarse de forma independiente.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info mt-3">
+                                    <h5><i class="fas fa-info-circle me-2"></i>Malla de servicio</h5>
+                                    <p class="mb-0">Para evitar las redundancias, muchos desarrolladores implementan, en su lugar, una malla de servicio. La malla actúa como una capa de infraestructura o una instancia de proxy dentro de la arquitectura de microservicios para ayudar a proteger, controlar y monitorear las comunicaciones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Ejemplos de arquitectura de microservicios</h2>
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <p>A medida que las aplicaciones de nube siguen creciendo en escala y alcance, los desarrolladores confían cada vez más en los microservicios para construir aplicaciones multifuncionales complejas y escalarlas rápidamente para incorporar los modelos cambiantes de uso.</p>
+                                
+                                <div class="row g-4 mt-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 shadow-sm">
+                                            <img src="img/rideshare-app.jpg" class="card-img-top" alt="Aplicación de compartir vehículo">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Aplicaciones para compartir vehículo</h5>
+                                                <p class="card-text">Las aplicaciones populares para compartir vehículo se basan en los microservicios, pero los pasajeros y los conductores tienen experiencias de usuario diferenciadas. La administración de conductores, el seguimiento de la ubicación, los perfiles de pasajeros y el procesamiento de pagos son algunos de los microservicios dispares que admiten juntos las interfaces de usuarios y conductores.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 shadow-sm">
+                                            <img src="img/ecommerce.jpg" class="card-img-top" alt="Comercio electrónico">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tiendas de comercio electrónico</h5>
+                                                <p class="card-text">Una arquitectura de microservicios también es un entorno común para las tiendas de comercio electrónico. La recomendación del producto y los procesos de pago podrían desarrollarse e implementarse como microservicios individuales, pero el comprador experimentaría los dos procesos dentro de la interfaz y el entorno de marca de la tienda en línea.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h2 class="mb-4">Video Explicativo</h2>
+                        <div class="ratio ratio-16x9 shadow-sm">
+                            <iframe src="https://www.youtube.com/embed/PY-qZpL_8j8" title="¿Qué son los microservicios?" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+    <div class="sticky-top" style="top: 80px;">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Contenido</h5>
+            </div>
+            <div class="card-body">
+                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-1">¿Qué son los microservicios?</a>
+                        <a class="nav-link" href="#item-2">Características</a>
+                        <a class="nav-link" href="#item-3">Beneficios</a>
+                        <a class="nav-link" href="#item-4">Cómo funciona</a>
+                        <a class="nav-link" href="#item-5">Microservicios y DevOps</a>
+                        <a class="nav-link" href="#item-6">Protección</a>
+                        <a class="nav-link" href="#item-7">Ejemplos</a>
+                        <a class="nav-link" href="#item-8">Video</a>
+                    </nav>
+                </nav>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Información del proyecto</h5>
+            </div>
+            <div class="card-body">
+                <p>Este contenido forma parte del proyecto académico de Desarrollo Web.</p>
+                <p>Universidad Autónoma, 2025</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
